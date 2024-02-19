@@ -16,7 +16,7 @@ const Home = () => {
         <ul className="menu p-4">
           <li className="py-1">
             <NavLink to="/">
-              <FaHome></FaHome>
+              <FaHome />
               BuzzTalk
             </NavLink>
           </li>
@@ -24,26 +24,26 @@ const Home = () => {
           <>
             <li>
               <NavLink to="/profile">
-                <FaUser></FaUser>
+                <FaUser />
                 Profile
               </NavLink>
             </li>
             <li>
               <NavLink to="/chats">
-                <FaList></FaList>
+                <FaList />
                 Chats
               </NavLink>
             </li>
             <li>
               <NavLink to="/groups">
-                <FaUsers></FaUsers>
+                <FaUsers />
                 Groups
               </NavLink>
             </li>
 
             <li>
               <NavLink to="/settings">
-                <IoMdSettings></IoMdSettings>
+                <IoMdSettings />
                 Settings
               </NavLink>
             </li>
