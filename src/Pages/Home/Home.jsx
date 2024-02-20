@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="flex">
       {/* sidebar */}
-      <div className="w-58 min-h-screen bg-yellow-400">
+      <div className="w-52 min-h-screen bg-yellow-400">
         <ul className="menu p-4">
           <li className="py-1">
             <NavLink to="/">
