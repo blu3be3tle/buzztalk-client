@@ -1,6 +1,8 @@
+import { IoSend } from 'react-icons/io5';
+
 const Chatbox = () => {
   return (
-    <div className="border-[1px] w-full">
+    <div className="border-[1px] w-full relative h-[100vh]">
       <div className="p-7 justify-between flex">
         <div className="flex">
           <img
@@ -16,12 +18,13 @@ const Chatbox = () => {
       </div>
       <hr />
 
-      <div className="p-7">
+      <div className="p-7 absolute bottom-0 w-full flex">
         <input
           type="text"
           placeholder="Type here"
-          className="input input-bordered w-full"
+          className="input input-bordered border-yellow-400 w-full"
         />
+        <IoSend className="m-3 text-2xl" />
       </div>
     </div>
   );
