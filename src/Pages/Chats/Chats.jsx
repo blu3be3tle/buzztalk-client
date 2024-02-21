@@ -1,7 +1,9 @@
+import List from './List';
+
 const Chats = () => {
   return (
     <div>
-      <h1>Chats</h1>
+      <List />
     </div>
   );
 };
