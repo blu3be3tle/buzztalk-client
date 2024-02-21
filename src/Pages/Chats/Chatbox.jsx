@@ -21,7 +21,7 @@ const Chatbox = () => {
       <div className="p-7 absolute bottom-0 w-full flex">
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="Enter message"
           className="input input-bordered border-yellow-400 w-full"
         />
         <IoSend className="m-3 text-2xl" />
