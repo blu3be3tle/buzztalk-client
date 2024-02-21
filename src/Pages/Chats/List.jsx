@@ -1,6 +1,6 @@
 const List = () => {
   return (
-    <div>
+    <div className="w-[480px]">
       <div className="px-7 pt-5">
         <label className="input input-bordered flex items-center gap-2 shadow-md">
           <input type="text" className="grow" placeholder="Search" />

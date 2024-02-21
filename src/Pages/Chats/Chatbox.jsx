@@ -16,7 +16,7 @@ const Chatbox = () => {
       </div>
       <hr />
 
-      <div className="">
+      <div className="p-7">
         <input
           type="text"
           placeholder="Type here"
