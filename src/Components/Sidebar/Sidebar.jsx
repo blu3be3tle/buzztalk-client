@@ -1,16 +1,10 @@
-import {
-  FaHome,
-  FaList,
-  FaRegNewspaper,
-  FaUser,
-  FaUsers,
-} from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
-import { NavLink, Outlet } from "react-router-dom";
+import { FaHome, FaList, FaUser, FaUsers } from 'react-icons/fa';
+import { IoMdSettings } from 'react-icons/io';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="w-52 min-h-screen bg-yellow-400">
+    <div className="w-36 min-h-screen bg-yellow-400">
       <ul className="menu p-4">
         <li className="py-1">
           <NavLink to="/">

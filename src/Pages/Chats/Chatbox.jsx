@@ -1,18 +1,30 @@
+import { IoSend } from 'react-icons/io5';
+
 const Chatbox = () => {
   return (
-    <div className="border-[1px] w-full">
+    <div className="border-[1px] w-full relative h-[100vh]">
       <div className="p-7 justify-between flex">
         <div className="flex">
           <img
             src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png"
             className="w-12"
           />
-          <h1 className="font-bold">Bruce Wayne</h1>
+          <h1 className="font-bold m-3">Bruce Wayne</h1>
         </div>
 
         <div>
           <button className="btn">...</button>
         </div>
+      </div>
+      <hr />
+
+      <div className="p-7 absolute bottom-0 w-full flex">
+        <input
+          type="text"
+          placeholder="Type here"
+          className="input input-bordered border-yellow-400 w-full"
+        />
+        <IoSend className="m-3 text-2xl" />
       </div>
     </div>
   );
