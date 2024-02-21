@@ -1,10 +1,4 @@
-import {
-  FaHome,
-  FaList,
-  FaRegNewspaper,
-  FaUser,
-  FaUsers,
-} from 'react-icons/fa';
+import { FaHome, FaList, FaUser, FaUsers } from 'react-icons/fa';
 import { IoMdSettings } from 'react-icons/io';
 import { NavLink, Outlet } from 'react-router-dom';
 
