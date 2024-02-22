@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../layout/Main";
-import Chats from "../pages/Chats/Chats";
-import Groups from "../pages/Groups/Groups";
-import Home from "../pages/Home/Home";
-import Login from "../pages/Login/Login";
-import Profile from "../pages/Profile/Profile";
-import Register from "../pages/Register/Register";
-import Settings from "../pages/Settings/Settings";
+import Chats from "../Pages/Chats/Chats";
+import Groups from "../Pages/Groups/Groups";
+import Home from "../Pages/Home/Home";
+import Profile from "../Pages/Profile/Profile";
+import Settings from "../Pages/Settings/Settings";
+import Main from "../Layout/Main";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
   {
