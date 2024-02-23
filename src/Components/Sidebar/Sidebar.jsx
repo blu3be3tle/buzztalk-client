@@ -1,3 +1,4 @@
+
 import React from "react";
 import { CgUserList } from "react-icons/cg";
 import { GrGroup } from "react-icons/gr";
@@ -48,46 +49,9 @@ const Sidebar = () => {
     },
   ];
   return (
+
     <>
-      {/* Previous Navigation Bar  */}
-      {/* <div className="w-52 min-h-screen bg-yellow-400">
-        <ul className="menu p-4">
-          <li className="py-1">
-            <NavLink to="/">
-              <FaHome />
-              BuzzTalk
-            </NavLink>
-          </li>
-
-          <>
-            <li>
-              <NavLink to="/home/profile">
-                <FaUser />
-                Profile
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/home/chats">
-                <FaList />
-                Chats
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/home/groups">
-                <FaUsers />
-                Groups
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink to="/home/settings">
-                <IoMdSettings />
-                Settings
-              </NavLink>
-            </li>
-          </>
-        </ul>
-      </div> */}
+     
 
       <Tabs
         className="w-[35%] bg-Cpurple/20 border-r-2 text-center shadow-xl"

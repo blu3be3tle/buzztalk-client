@@ -1,7 +1,11 @@
+import Chatbox from './Chatbox';
+import List from './List';
+
 const Chats = () => {
   return (
-    <div>
-      <h1>Chats</h1>
+    <div className="flex">
+      <List />
+      <Chatbox />
     </div>
   );
 };
