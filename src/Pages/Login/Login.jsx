@@ -3,14 +3,15 @@ import { useForm } from "react-hook-form";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { login, googleLogin, facebookLogin, githubLogin } =
+  const { login, googleLogin, facebookLogin, githubLogin, logout } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
@@ -100,6 +101,26 @@ const Login = () => {
         });
       });
   };
+
+  // User Logout
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        Swal.fire("Great!", "You've successfully logged in", "success");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        const errorMessage = error.message;
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: `${errorMessage}`,
+        });
+      });
+  };
+
+  console.log(location);
 
   // console.log(watch("")); // watch input value by passing the name of it
   // console.log(errors);
