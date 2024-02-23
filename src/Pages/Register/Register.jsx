@@ -7,8 +7,14 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
 const Register = () => {
-  const { createUser, googleLogin, facebookLogin, githubLogin } =
-    useContext(AuthContext);
+  const {
+    user,
+    createUser,
+    googleLogin,
+    facebookLogin,
+    githubLogin,
+    manageProfile,
+  } = useContext(AuthContext);
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const handleTogglePassword = () => {
@@ -21,15 +27,16 @@ const Register = () => {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data, e) => {
+  const onSubmit = (userData, e) => {
     e.target.reset();
-    console.log(data);
+    console.log(userData);
 
     // User Creation
-    createUser(data?.email, data?.password)
+    createUser(userData?.email, userData?.password)
       .then((res) => {
         console.log(res.user);
         Swal.fire("Great!", "Your Account is Registered", "success");
+        manageProfile(userData?.name, userData?.photoURL).then().catch();
         navigate("/");
       })
       .catch((error) => {
@@ -42,7 +49,7 @@ const Register = () => {
         });
       });
   };
-
+  console.log(user);
   // Facebook Login
   const handleFacebookLogin = () => {
     facebookLogin()

@@ -7,6 +7,7 @@ import Settings from "../Pages/Settings/Settings";
 import Main from "../Layout/Main";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -15,23 +16,43 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: (
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        ),
         children: [
           {
             path: "/home/profile",
-            element: <Profile />,
+            element: (
+              <PrivateRoute>
+                <Profile />
+              </PrivateRoute>
+            ),
           },
           {
             path: "/home/chats",
-            element: <Chats />,
+            element: (
+              <PrivateRoute>
+                <Chats />
+              </PrivateRoute>
+            ),
           },
           {
             path: "/home/groups",
-            element: <Groups />,
+            element: (
+              <PrivateRoute>
+                <Groups />
+              </PrivateRoute>
+            ),
           },
           {
             path: "/home/settings",
-            element: <Settings />,
+            element: (
+              <PrivateRoute>
+                <Settings />
+              </PrivateRoute>
+            ),
           },
         ],
       },
