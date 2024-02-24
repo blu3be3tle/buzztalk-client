@@ -16,7 +16,7 @@ const Chatbox = () => {
           <button className="btn">...</button>
         </div>
       </div>
-      <hr />
+      <hr className="border-gray-300" />
 
       <div className="p-7 absolute bottom-0 w-full flex">
         <input
