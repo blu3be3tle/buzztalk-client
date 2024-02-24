@@ -77,7 +77,7 @@ const Groups = () => {
         }}
       >
         <h1 className="text-2xl font-[600] text-left pb-5 text-white">
-          My Groups
+          My Contacts
         </h1>
         {/* group search bar */}
         <div className="flex items-center justify-center mt-4">
@@ -85,7 +85,7 @@ const Groups = () => {
             <Input
               type="search"
               color="white"
-              label="Search groups..."
+              label="Search contacts..."
               className="pr-20 text-white border border-b-white border-t-0 border-r-0 border-l-0"
               containerProps={{
                 className: 'min-w-[288px] text-white',
