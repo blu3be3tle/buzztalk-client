@@ -22,8 +22,8 @@ const Groups = () => {
             <Input
               type="search"
               color="white"
-              label="Type here..."
-              className="pr-20 text-white "
+              label="Search for contacts here..."
+              className="pr-20 text-white border border-b-white border-t-0 border-r-0 border-l-0"
               containerProps={{
                 className: 'min-w-[288px] text-white',
               }}
