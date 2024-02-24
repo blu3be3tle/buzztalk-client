@@ -14,6 +14,7 @@ import {
 import Profile from '../../Pages/Profile/Profile';
 import Settings from '../../Pages/Settings/Settings';
 import Chats from '../../Pages/Chats/Chats';
+import Groups from '../../Pages/Groups/Groups';
 
 const Sidebar = () => {
   const data = [
@@ -37,8 +38,7 @@ const Sidebar = () => {
     {
       value: 'group',
       icon: GrGroup,
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+      desc: <Groups />,
     },
     {
       value: 'settings',
