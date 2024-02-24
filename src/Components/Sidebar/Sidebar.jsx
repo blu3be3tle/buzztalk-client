@@ -3,6 +3,7 @@ import { CgUserList } from 'react-icons/cg';
 import { GrGroup } from 'react-icons/gr';
 import { IoChatboxEllipsesOutline } from 'react-icons/io5';
 import { RiHome5Line, RiSettings2Line } from 'react-icons/ri';
+import { MdOutlineDarkMode } from 'react-icons/md';
 
 import {
   Tab,
@@ -17,13 +18,13 @@ import Groups from '../../Pages/Groups/Groups';
 
 const Sidebar = () => {
   const data = [
-    // {
-    //   value: 'dashboard',
-    //   icon: RiHome5Line,
-    //   desc: `It really matters and then like it really doesn't matter.
-    //   What matters is the people who are sparked by it. And the people
-    //   who are like offended by it, it doesn't matter.`,
-    // },
+    {
+      value: 'dashboard',
+      icon: RiHome5Line,
+      desc: `It really matters and then like it really doesn't matter.
+      What matters is the people who are sparked by it. And the people
+      who are like offended by it, it doesn't matter.`,
+    },
     {
       value: 'chats',
       icon: IoChatboxEllipsesOutline,
@@ -54,7 +55,7 @@ const Sidebar = () => {
         value="dashboard"
         orientation="vertical"
       >
-        <TabsHeader className="w-24 h-screen top-0 p-0 bg-gray-400 z-10">
+        <TabsHeader className="w-24 h-screen top-0 p-0 bg-gray-200 z-10">
           {data.map(({ label, value, icon }) => (
             <Tab
               key={value}
@@ -70,6 +71,9 @@ const Sidebar = () => {
               </div>
             </Tab>
           ))}
+          <div className="flex items-center justify-center text-[25px] py-6">
+            <MdOutlineDarkMode />
+          </div>
         </TabsHeader>
         <TabsBody>
           {data.map(({ value, desc }) => (
