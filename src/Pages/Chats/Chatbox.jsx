@@ -2,7 +2,7 @@ import { IoSend } from 'react-icons/io5';
 
 const Chatbox = () => {
   return (
-    <div className="border-[1px] w-full relative h-[100vh]">
+    <div className="border-[2px] border-opacity-20 border-gray-400 w-full relative h-[100vh]">
       <div className="p-7 justify-between flex">
         <div className="flex">
           <img

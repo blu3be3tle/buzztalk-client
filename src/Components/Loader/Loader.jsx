@@ -1,4 +1,4 @@
-import logo from "../../../Public/logo.png";
+import logo from '/logo.png';
 const Loader = () => {
   return (
     <div className="h-screen relative flex justify-center items-center">
