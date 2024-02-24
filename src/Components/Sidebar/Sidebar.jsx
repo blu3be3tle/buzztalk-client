@@ -13,16 +13,17 @@ import {
 } from '@material-tailwind/react';
 import Profile from '../../Pages/Profile/Profile';
 import Settings from '../../Pages/Settings/Settings';
+import Groups from '../../Pages/Groups/Groups';
 
 const Sidebar = () => {
   const data = [
-    {
-      value: 'dashboard',
-      icon: RiHome5Line,
-      desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people 
-      who are like offended by it, it doesn't matter.`,
-    },
+    // {
+    //   value: 'dashboard',
+    //   icon: RiHome5Line,
+    //   desc: `It really matters and then like it really doesn't matter.
+    //   What matters is the people who are sparked by it. And the people
+    //   who are like offended by it, it doesn't matter.`,
+    // },
     {
       value: 'chats',
       icon: IoChatboxEllipsesOutline,
@@ -38,8 +39,7 @@ const Sidebar = () => {
     {
       value: 'group',
       icon: GrGroup,
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+      desc: <Groups />,
     },
     {
       value: 'settings',
