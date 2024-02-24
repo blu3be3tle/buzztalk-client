@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-// const withMT = require("@material-tailwind/html/utils/withMT");
-export default {
+const withMT = require("@material-tailwind/html/utils/withMT");
+export default withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   themes: ["light", "dark", "cupcake"],
   plugins: [require("daisyui")],
@@ -11,4 +11,4 @@ export default {
       },
     },
   },
-};
+});
