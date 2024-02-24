@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CgUserList } from 'react-icons/cg';
 import { GrGroup } from 'react-icons/gr';
 import { IoChatboxEllipsesOutline } from 'react-icons/io5';
 import { RiHome5Line, RiSettings2Line } from 'react-icons/ri';
-import { MdOutlineDarkMode } from 'react-icons/md';
+import { MdOutlineDarkMode, MdOutlineWbSunny } from 'react-icons/md';
 
 import {
   Tab,
@@ -17,6 +17,28 @@ import Settings from '../../Pages/Settings/Settings';
 import Groups from '../../Pages/Groups/Groups';
 
 const Sidebar = () => {
+  const [mode, setMode] = useState('light');
+  const handleChangeTheme = () => {
+    const html = document.documentElement;
+    if (mode === 'light') {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      setMode('dark');
+      localStorage.setItem('mode', 'dark');
+    } else {
+      html.classList.add('light');
+      html.classList.remove('dark');
+      setMode('light');
+      localStorage.setItem('mode', 'light');
+    }
+  };
+
+  useEffect(() => {
+    const currentMode = localStorage.getItem('mode') || 'light';
+    document.documentElement.classList.add(currentMode);
+    setMode(currentMode);
+  }, []);
+
   const data = [
     {
       value: 'dashboard',
@@ -72,7 +94,9 @@ const Sidebar = () => {
             </Tab>
           ))}
           <div className="flex items-center justify-center text-[25px] py-6">
-            <MdOutlineDarkMode />
+            <button onClick={handleChangeTheme}>
+              {mode === 'light' ? <MdOutlineDarkMode /> : <MdOutlineWbSunny />}
+            </button>
           </div>
         </TabsHeader>
         <TabsBody>
