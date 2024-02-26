@@ -1,11 +1,4 @@
-import {
-  FaHome,
-  FaList,
-  FaRegNewspaper,
-  FaUser,
-  FaUsers,
-} from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
+
 import { Outlet } from "react-router-dom";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import { io } from "socket.io-client";

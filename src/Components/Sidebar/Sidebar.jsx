@@ -1,8 +1,8 @@
-import React from "react";
-import { CgUserList } from "react-icons/cg";
-import { GrGroup } from "react-icons/gr";
-import { IoChatboxEllipsesOutline } from "react-icons/io5";
-import { RiHome5Line, RiSettings2Line } from "react-icons/ri";
+import React from 'react';
+import { CgUserList } from 'react-icons/cg';
+import { GrGroup } from 'react-icons/gr';
+import { IoChatboxEllipsesOutline } from 'react-icons/io5';
+import { RiHome5Line, RiSettings2Line } from 'react-icons/ri';
 
 import {
   Tab,
@@ -10,87 +10,46 @@ import {
   Tabs,
   TabsBody,
   TabsHeader,
-} from "@material-tailwind/react";
-import Profile from "../../Pages/Profile/Profile";
-import Settings from "../../Pages/Settings/Settings";
+} from '@material-tailwind/react';
+import Profile from '../../Pages/Profile/Profile';
+import Settings from '../../Pages/Settings/Settings';
+import Chats from '../../Pages/Chats/Chats';
 
 const Sidebar = () => {
   const data = [
     {
-      value: "dashboard",
+      value: 'dashboard',
       icon: RiHome5Line,
       desc: `It really matters and then like it really doesn't matter.
       What matters is the people who are sparked by it. And the people 
       who are like offended by it, it doesn't matter.`,
     },
     {
-      value: "chats",
+      value: 'chats',
       icon: IoChatboxEllipsesOutline,
-      desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people 
-      who are like offended by it, it doesn't matter.`,
+      desc: <Chats />,
     },
     {
-      value: "profile",
+      value: 'profile',
       icon: CgUserList,
       desc: <Profile />,
     },
     {
-      value: "group",
+      value: 'group',
       icon: GrGroup,
       desc: `Because it's about motivating the doers. Because I'm here
       to follow my dreams and inspire other people to follow their dreams, too.`,
     },
     {
-      value: "settings",
+      value: 'settings',
       icon: RiSettings2Line,
       desc: <Settings />,
     },
   ];
   return (
     <>
-      {/* Previous Navigation Bar  */}
-      {/* <div className="w-52 min-h-screen bg-yellow-400">
-        <ul className="menu p-4">
-          <li className="py-1">
-            <NavLink to="/">
-              <FaHome />
-              BuzzTalk
-            </NavLink>
-          </li>
-
-          <>
-            <li>
-              <NavLink to="/home/profile">
-                <FaUser />
-                Profile
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/home/chats">
-                <FaList />
-                Chats
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/home/groups">
-                <FaUsers />
-                Groups
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink to="/home/settings">
-                <IoMdSettings />
-                Settings
-              </NavLink>
-            </li>
-          </>
-        </ul>
-      </div> */}
-
       <Tabs
-        className="w-[35%] bg-Cpurple/20 border-r-2 text-center shadow-xl"
+        className="w-full bg-Cpurple/20 border-r-2 text-center shadow-xl"
         value="dashboard"
         orientation="vertical"
       >
@@ -99,12 +58,12 @@ const Sidebar = () => {
             <Tab
               key={value}
               value={value}
-              className=" bg-white border-r-2 text-center"
+              className="w-full bg-gray-100 border-r-2 text-center"
             >
               <div className="flex items-center gap-2">
                 <div className="tooltip tooltip-right" data-tip={value}>
                   {React.createElement(icon, {
-                    className: "text-[25px]",
+                    className: 'text-[25px]',
                   })}
                 </div>
               </div>
