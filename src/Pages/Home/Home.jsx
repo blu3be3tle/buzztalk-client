@@ -8,8 +8,10 @@ import {
 import { IoMdSettings } from "react-icons/io";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import { io } from "socket.io-client";
 
 const Home = () => {
+  const socket = io.connect("/");
   return (
     <div className="flex">
       {/* sidebar */}
