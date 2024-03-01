@@ -10,8 +10,8 @@ const Chatbox = () => {
   };
 
   useEffect(() => {
-    socket.on('receive_message', (msg) => {
-      alert(msg.message);
+    socket.on('receive_message', (data) => {
+      alert(data.message);
     });
   }, [socket]);
 
