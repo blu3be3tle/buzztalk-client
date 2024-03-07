@@ -86,7 +86,7 @@ const Groups = () => {
               type="search"
               color="white"
               label="Search contacts..."
-              className="pr-20 text-white border border-b-white border-t-0 border-r-0 border-l-0"
+              className=" text-white border border-b-white border-t-0 border-r-0 border-l-0"
               containerProps={{
                 className: 'min-w-[288px] text-white',
               }}
