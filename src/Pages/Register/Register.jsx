@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
-import { FaFacebook, FaGithub } from "react-icons/fa";
-import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
-import { AuthContext } from "../../providers/AuthProvider";
+import { useContext, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { FaFacebook, FaGithub } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { FcGoogle } from 'react-icons/fc';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../Providers/AuthProvider';
 const Register = () => {
   const {
     user,
@@ -35,16 +35,16 @@ const Register = () => {
     createUser(userData?.email, userData?.password)
       .then((res) => {
         console.log(res.user);
-        Swal.fire("Great!", "Your Account is Registered", "success");
+        Swal.fire('Great!', 'Your Account is Registered', 'success');
         manageProfile(userData?.name, userData?.photoURL).then().catch();
-        navigate("/");
+        navigate('/');
       })
       .catch((error) => {
         console.log(error);
         const errorMessage = error.message;
         Swal.fire({
-          icon: "error",
-          title: "Oops...",
+          icon: 'error',
+          title: 'Oops...',
           text: `${errorMessage}`,
         });
       });
@@ -55,15 +55,15 @@ const Register = () => {
     facebookLogin()
       .then((res) => {
         console.log(res.user);
-        Swal.fire("Great!", "Your Account is Registered", "success");
-        navigate("/");
+        Swal.fire('Great!', 'Your Account is Registered', 'success');
+        navigate('/');
       })
       .catch((error) => {
         console.log(error);
         const errorMessage = error.message;
         Swal.fire({
-          icon: "error",
-          title: "Oops...",
+          icon: 'error',
+          title: 'Oops...',
           text: `${errorMessage}`,
         });
       });
@@ -74,15 +74,15 @@ const Register = () => {
     googleLogin()
       .then((res) => {
         console.log(res.user);
-        Swal.fire("Great!", "Your Account is Registered", "success");
-        navigate("/");
+        Swal.fire('Great!', 'Your Account is Registered', 'success');
+        navigate('/');
       })
       .catch((error) => {
         console.log(error);
         const errorMessage = error.message;
         Swal.fire({
-          icon: "error",
-          title: "Oops...",
+          icon: 'error',
+          title: 'Oops...',
           text: `${errorMessage}`,
         });
       });
@@ -93,15 +93,15 @@ const Register = () => {
     githubLogin()
       .then((res) => {
         console.log(res.user);
-        Swal.fire("Great!", "Your Account is Registered", "success");
-        navigate("/");
+        Swal.fire('Great!', 'Your Account is Registered', 'success');
+        navigate('/');
       })
       .catch((error) => {
         console.log(error);
         const errorMessage = error.message;
         Swal.fire({
-          icon: "error",
-          title: "Oops...",
+          icon: 'error',
+          title: 'Oops...',
           text: `${errorMessage}`,
         });
       });
@@ -133,7 +133,7 @@ const Register = () => {
                     <span className="label-text font-medium">Name</span>
                   </label>
                   <input
-                    {...register("name", { required: true })}
+                    {...register('name', { required: true })}
                     placeholder="Name"
                     className="input input-bordered"
                     // required
@@ -149,7 +149,7 @@ const Register = () => {
                     <span className="label-text font-medium">Email</span>
                   </label>
                   <input
-                    {...register("email", { required: true })}
+                    {...register('email', { required: true })}
                     type="email"
                     placeholder="Email"
                     className="input input-bordered"
@@ -166,10 +166,10 @@ const Register = () => {
                   <span className="label-text font-medium">PhotoUrl</span>
                 </label>
                 <input
-                  {...register("photoURL", {
+                  {...register('photoURL', {
                     required: {
                       value: true,
-                      message: "Url is required",
+                      message: 'Url is required',
                     },
                     pattern:
                       /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/,
@@ -180,7 +180,7 @@ const Register = () => {
                 />
                 {errors.photoURL && (
                   <span className="text-red-400 text-sm text-left">
-                    {`${errors.photoURL.message}` || "Enter a valid Url"}
+                    {`${errors.photoURL.message}` || 'Enter a valid Url'}
                   </span>
                 )}
               </div>
@@ -190,7 +190,7 @@ const Register = () => {
                 </label>
                 <div className="flex items-center">
                   <input
-                    {...register("password", {
+                    {...register('password', {
                       required: true,
                       pattern:
                         /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
@@ -198,7 +198,7 @@ const Register = () => {
                     // Minimum eight characters, at least one letter, one number and one special character:
                     // name="password"
 
-                    type={showPassword ? "text" : "password"}
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                     className="input input-bordered w-full"
                   />
