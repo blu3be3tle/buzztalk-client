@@ -10,11 +10,13 @@ import {
   Tabs,
   TabsBody,
   TabsHeader,
-} from "@material-tailwind/react";
-import Profile from "../../Pages/Profile/Profile";
-import Settings from "../../Pages/Settings/Settings";
-import Chats from "../../Pages/Chats/Chats";
-import Groups from "../../Pages/Groups/Groups";
+
+} from '@material-tailwind/react';
+import Profile from '../../Pages/Profile/Profile';
+import Settings from '../../Pages/Settings/Settings';
+import Chats from '../../Pages/Chats/Chats';
+import Groups from '../../Pages/Groups/Groups';
+
 
 const Sidebar = () => {
   const data = [

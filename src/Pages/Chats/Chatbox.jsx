@@ -1,6 +1,20 @@
+import { useEffect } from 'react';
 import { IoSend } from 'react-icons/io5';
+import { io } from 'socket.io-client';
+
+const socket = io.connect('http://localhost:3000');
 
 const Chatbox = () => {
+  const sendMessage = () => {
+    socket.emit('send_message', { message: 'Hello' });
+  };
+
+  useEffect(() => {
+    socket.on('receive_message', (data) => {
+      alert(data.message);
+    });
+  }, [socket]);
+
   return (
     <div className="border-[2px] border-opacity-20 border-gray-400 w-full relative h-[100vh]">
       <div className="p-7 justify-between flex">
@@ -24,7 +38,10 @@ const Chatbox = () => {
           placeholder="Enter message"
           className="input input-bordered border-gray-400 border-opacity-50 w-full"
         />
-        <IoSend className="m-3 text-2xl" />
+
+        <button onClick={sendMessage}>
+          <IoSend className="m-3 text-2xl" />
+        </button>
       </div>
     </div>
   );
