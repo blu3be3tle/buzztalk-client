@@ -1,7 +1,3 @@
-Sure, here's a basic README for your MERN stack chat app without Redux but with Mongoose and Socket.io:
-
----
-
 # BuzzTalk
 
 This is a simple chat application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) without Redux, but utilizing Mongoose for MongoDB interactions and Socket.io for real-time communication.
