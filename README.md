@@ -32,7 +32,7 @@ This is a simple chat application built using the MERN stack (MongoDB, Express.j
 2. Navigate to the project directory:
 
    ```bash
-   cd mern-chat-app
+   cd buzztalk-client
    ```
 
 3. Install server dependencies:
@@ -41,25 +41,19 @@ This is a simple chat application built using the MERN stack (MongoDB, Express.j
    npm install
    ```
 
-4. Navigate to the client directory:
-
-   ```bash
-   cd client
-   ```
-
-5. Install client dependencies:
+4. Install client dependencies:
 
    ```bash
    npm install
    ```
 
-6. Return to the root directory:
+5. Return to the root directory:
 
    ```bash
    cd ..
    ```
 
-7. Set up your MongoDB database:
+6. Set up your MongoDB database:
 
    - Create a MongoDB Atlas account or install MongoDB locally.
    - Create a `.env` file in the root directory and add your MongoDB connection string:
