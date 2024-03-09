@@ -47,13 +47,7 @@ This is a simple chat application built using the MERN stack (MongoDB, Express.j
    npm install
    ```
 
-5. Return to the root directory:
-
-   ```bash
-   cd ..
-   ```
-
-6. Set up your MongoDB database:
+5. Set up your MongoDB database:
 
    - Create a MongoDB Atlas account or install MongoDB locally.
    - Create a `.env` file in the root directory and add your MongoDB connection string:
@@ -62,13 +56,13 @@ This is a simple chat application built using the MERN stack (MongoDB, Express.j
      MONGODB_URI=your_mongodb_connection_string
      ```
 
-8. Start the development server:
+6. Start the development server:
 
    ```bash
    npm run dev
    ```
 
-9. Open your browser and navigate to `http://localhost:5731` to view the app.
+7. Open your browser and navigate to `http://localhost:5731` to view the app.
 
 ## Usage
 
